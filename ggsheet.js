@@ -19,7 +19,7 @@ let config = {
   
 async function getAddressUrls_() {
   // Get the Google Sheet ID
-  const sheetId = "1We5CQXqNpup4obY_0Dqis4aLeNfxRVCsMIEB4F28L1o";
+  const sheetId = "1AtWZsGxTiu6MR8tYpypulqxiFs5tLn0qeHrGB0FTcjI";
 
   // Initialize auth - see https://theoephraim.github.io/node-google-spreadsheet/#/guides/authentication
   const serviceAccountAuth = new JWT({
@@ -33,7 +33,9 @@ async function getAddressUrls_() {
   // Create a service object
   const doc = new GoogleSpreadsheet(sheetId, serviceAccountAuth);
   await doc.loadInfo();
-  const sheet = doc.sheetsByIndex[1];
+
+  // sửa dòng này
+  const sheet = doc.sheetsByIndex[3];
 
   // Get the data from the sheet
   return sheet;
