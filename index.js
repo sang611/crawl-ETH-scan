@@ -5,7 +5,7 @@ import { polygonScan } from './indexPolygon.js';
 import { bscScan } from './indexBscScan.js';
 
 etherScan();
-// optimisticScan()
-// polygonScan();
-// arbiScan()
-// bscScan()
+optimisticScan()
+polygonScan();
+arbiScan()
+bscScan()

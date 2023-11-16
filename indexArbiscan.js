@@ -4,7 +4,7 @@ import cheerio from "cheerio";
 import { getAddressUrls } from "./ggsheet.js";
 
 export const arbiScan = async () => {
-  const sheet = await getAddressUrls();
+  const sheet = await getAddressUrls(2);
   const rows = await sheet.getRows();
 
   for (let row of rows) {

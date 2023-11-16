@@ -17,7 +17,7 @@ let config = {
     "universe_domain": "googleapis.com"
   };
   
-async function getAddressUrls_() {
+async function getAddressUrls_(i) {
   // Get the Google Sheet ID
   const sheetId = "1AtWZsGxTiu6MR8tYpypulqxiFs5tLn0qeHrGB0FTcjI";
 
@@ -35,7 +35,7 @@ async function getAddressUrls_() {
   await doc.loadInfo();
 
   // sửa dòng này
-  const sheet = doc.sheetsByIndex[0];
+  const sheet = doc.sheetsByIndex[i];
 
   // Get the data from the sheet
   return sheet;
