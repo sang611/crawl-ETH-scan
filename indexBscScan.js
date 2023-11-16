@@ -19,7 +19,7 @@ export const bscScan = async () => {
                                             .contents().filter(function() {
                                               return this.nodeType === 3; // Chọn các phần tử văn bản (#text)
                                           }).text()
-                                            .split('$')[1].replace('/,/g', '');
+                                            .split('$')[1].replace(/,/g, '');
     
       console.log(`ETH value: ${ethvalue}`);
 
@@ -31,10 +31,10 @@ export const bscScan = async () => {
             return this.nodeType === 3; // Chọn các phần tử văn bản (#text)
         })
         .text()     
-        .replace("/\n/g", "")
-        .replace("/ /g", "")
+        .replace(/\n/g, "")
+        .replace(/ /g, "")
         .split('$')[1]
-        .replace('/,/g', '');;
+        .replace(/,/g, '');;
       } else {
         tokenElement = 0
       }

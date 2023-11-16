@@ -16,7 +16,7 @@ export const arbiScan = async () => {
       const response = await axios.get(url);
       const html = await response.data;
       const $ = cheerio.load(html);
-      const ethvalue = $("#ContentPlaceHolder1_divSummary .col-md-8")[1].children[0].data.split('$')[1].replace('/,/g', '');
+      const ethvalue = $("#ContentPlaceHolder1_divSummary .col-md-8")[1].children[0].data.split('$')[1].replace(/,/g, '');
     
       console.log(`ETH value: ${ethvalue}`);
 
@@ -28,10 +28,10 @@ export const arbiScan = async () => {
             return this.nodeType === 3; // Chọn các phần tử văn bản (#text)
         })
         .text()     
-        .replace("/\n/g", "")
-        .replace("/ /g", "")
+        .replace(/\n/g, "")
+        .replace(/ /g, "")
         .split('$')[1]
-        .replace('/,/g', '');;
+        .replace(/,/g, '');;
       } else {
         tokenElement = $('.col-md-8').eq(0).text().split(" ")[0]
       }

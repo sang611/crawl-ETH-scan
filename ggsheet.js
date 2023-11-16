@@ -35,7 +35,7 @@ async function getAddressUrls_() {
   await doc.loadInfo();
 
   // sửa dòng này
-  const sheet = doc.sheetsByIndex[3];
+  const sheet = doc.sheetsByIndex[0];
 
   // Get the data from the sheet
   return sheet;

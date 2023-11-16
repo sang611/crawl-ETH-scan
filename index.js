@@ -4,8 +4,8 @@ import { arbiScan } from './indexArbiscan.js';
 import { polygonScan } from './indexPolygon.js';
 import { bscScan } from './indexBscScan.js';
 
-// etherScan();
+etherScan();
 // optimisticScan()
 // polygonScan();
 // arbiScan()
-bscScan()
+// bscScan()
